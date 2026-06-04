@@ -35,9 +35,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-        
-        // Fix JPMS module access issues with KAPT
-        isCoreLibraryDesugaringEnabled = true
     }
     
     kotlinOptions {
@@ -90,9 +87,6 @@ dependencies {
     implementation("com.google.dagger:hilt-android:2.48")
     kapt("com.google.dagger:hilt-compiler:2.48")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
-
-    // Core library desugaring for Java compatibility
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
